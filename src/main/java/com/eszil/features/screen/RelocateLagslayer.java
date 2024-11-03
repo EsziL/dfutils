@@ -8,6 +8,7 @@ import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.text.Text;
 
+import java.util.List;
 import java.util.regex.Pattern;
 
 public class RelocateLagslayer {
@@ -45,7 +46,11 @@ public class RelocateLagslayer {
                 }
 
                 if (toRender && relocatedMessage != null) {
-                    matrixStack.drawTextWithShadow(client.textRenderer, relocatedMessage, 5, client.getWindow().getScaledHeight() - client.textRenderer.fontHeight - 5, 0xFFFFFF);
+                    List<Text> siblings = relocatedMessage.getSiblings();
+
+                    matrixStack.drawTextWithShadow(client.textRenderer, siblings.getFirst(), 5, client.getWindow().getScaledHeight() - (client.textRenderer.fontHeight*3) - 5, 0xFFFFFF);
+                    matrixStack.drawTextWithShadow(client.textRenderer, siblings.get(1).copy().append(siblings.get(2).copy().append(siblings.get(3))), 5, client.getWindow().getScaledHeight() - (client.textRenderer.fontHeight*2) - 5, 0xFFFFFF);
+                    matrixStack.drawTextWithShadow(client.textRenderer, siblings.get(4).copy().append(siblings.get(5)), 5, client.getWindow().getScaledHeight() - client.textRenderer.fontHeight - 5, 0xFFFFFF);
                 }
             });
         }
