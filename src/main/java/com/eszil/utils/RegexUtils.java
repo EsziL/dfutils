@@ -8,16 +8,18 @@ import java.util.regex.Pattern;
 public class RegexUtils {
 
     public static boolean didJoinGame(Text message) {
-        String messageAsString = message.getString();
-
-        boolean joinedGame = Pattern.compile("^» Joined game: (.+?) by ([^.]+)\\.$").matcher(messageAsString).find();
-        boolean joinedDev = Pattern.compile("^» You are now in dev mode\\.$").matcher(messageAsString).find();
-        boolean joinedBuild = Pattern.compile("^» You are now in build mode\\.$").matcher(messageAsString).find();
-
-        return joinedGame || joinedDev || joinedBuild;
+        return didJoinPlay(message) || didJoinDev(message) || didJoinBuild(message);
     }
 
     public static boolean didJoinDev(Text message) {
         return Pattern.compile("^» You are now in dev mode\\.$").matcher(message.getString()).find();
+    }
+
+    public static boolean didJoinBuild(Text message) {
+        return Pattern.compile("^» You are now in build mode\\.$").matcher(message.getString()).find();
+    }
+
+    public static boolean didJoinPlay(Text message) {
+        return Pattern.compile("^» Joined game: (.+?) by ([^.]+)\\.$").matcher(message.getString()).find();
     }
 }
