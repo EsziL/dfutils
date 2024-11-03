@@ -1,7 +1,9 @@
 package com.eszil.features.screen;
 
+import com.eszil.config.Configuration;
 import com.eszil.utils.OtherUtils;
 import com.eszil.utils.ServerUtils;
+import me.shedaniel.autoconfig.AutoConfig;
 import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.text.Text;
@@ -18,6 +20,9 @@ public class RelocateLagslayer {
 
     public static boolean run(Text message) {
         if (!ServerUtils.isOnDF()) return false;
+        Configuration config = AutoConfig.getConfigHolder(Configuration.class).getConfig();
+        if (!config.relocateLagslayer) return false;
+
 
         String messageAsString = message.getString();
         if (Pattern.compile("^CPU Usage: \\[▮{20}] \\(\\d{1,3}\\.\\d+%\\)$").matcher(messageAsString).find()) {

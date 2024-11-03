@@ -14,15 +14,13 @@ public class AutoLagslayer {
     public static void run(Text message) {
         if (!ServerUtils.isOnDF()) return;
         Configuration config = AutoConfig.getConfigHolder(Configuration.class).getConfig();
+        if (!config.autoLagslayer) return;
 
-        if (config.autoLagslayer) {
-            MinecraftClient client = MinecraftClient.getInstance();
+        MinecraftClient client = MinecraftClient.getInstance();
 
-            if (RegexUtils.didJoinDev(message) && client.player != null) {
-                client.player.networkHandler.sendChatCommand("lagslayer");
-            }
+        if (RegexUtils.didJoinDev(message) && client.player != null) {
+            client.player.networkHandler.sendChatCommand("lagslayer");
         }
-
 
     }
 

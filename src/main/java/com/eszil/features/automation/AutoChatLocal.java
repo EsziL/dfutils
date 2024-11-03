@@ -14,14 +14,14 @@ public class AutoChatLocal {
     public static void run(Text message) {
         if (!ServerUtils.isOnDF()) return;
         Configuration config = AutoConfig.getConfigHolder(Configuration.class).getConfig();
+        if (!config.autoChatMode.enabled) return;
 
-        if (config.autoChatMode.enabled) {
-            MinecraftClient client = MinecraftClient.getInstance();
+        MinecraftClient client = MinecraftClient.getInstance();
 
-            if (RegexUtils.didJoinGame(message) && client.player != null) {
-                client.player.networkHandler.sendChatCommand("c "+config.autoChatMode.mode.toString().toLowerCase());
-            }
+        if (RegexUtils.didJoinGame(message) && client.player != null) {
+            client.player.networkHandler.sendChatCommand("c "+config.autoChatMode.mode.toString().toLowerCase());
         }
+
 
 
     }
