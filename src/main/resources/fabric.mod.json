@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "dfutils",
+	"version": "${version}",
+	"name": "dfutils",
+	"description": "cool df stuff",
+	"authors": [
+		"Eszi"
+	],
+	"contact": {
+		"homepage": "https://github.com/EsziL/",
+		"sources": "https://github.com/EsziL/dfutils"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/dfutils/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [],
+		"client": [
+			"com.eszil.Dfutils"
+		],
+		"modmenu": [
+			"com.eszil.config.ConfigScreen"
+		]
+	},
+	"mixins": [
+		"dfutils.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.7",
+		"minecraft": "~1.20.4",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

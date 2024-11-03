@@ -1,0 +1,28 @@
+{
+  "text.autoconfig.dfutils.title": "dfutils config",
+
+  "text.autoconfig.dfutils.category.automation": "Automation",
+  "text.autoconfig.dfutils.category.keybinds": "Keybinds",
+  "text.autoconfig.dfutils.category.screen": "Screen",
+
+  "text.autoconfig.dfutils.option.autoChatMode": "Auto /chat",
+  "text.autoconfig.dfutils.option.autoChatMode.@Tooltip": "Executes '/chat [mode]' every time you join the plot (because DF's doesn't work)",
+  "text.autoconfig.dfutils.option.autoChatMode.enabled": "Enabled",
+  "text.autoconfig.dfutils.option.autoChatMode.mode": "Mode",
+
+  "text.autoconfig.dfutils.option.autoLagslayer": "Auto /lagslayer",
+  "text.autoconfig.dfutils.option.autoLagslayer.@Tooltip": "Executes '/lagslayer' every time you join dev mode",
+
+  "text.autoconfig.dfutils.option.flightSpeedValues": "Flight Speed Values",
+  "text.autoconfig.dfutils.option.flightSpeedValues.@Tooltip": "What % speed the keybinds set you to",
+  "text.autoconfig.dfutils.option.flightSpeedValues.normal": "Normal",
+  "text.autoconfig.dfutils.option.flightSpeedValues.medium": "Medium",
+  "text.autoconfig.dfutils.option.flightSpeedValues.high": "High",
+
+  "text.autoconfig.dfutils.option.relocateLagslayer": "Relocate Lagslayer",
+  "text.autoconfig.dfutils.option.relocateLagslayer.@Tooltip": "Relocates the /lagslayer output so it doesn't mess with your actionbar",
+
+  "key.category.dfutils": "dfutils",
+  "key.dfutils.flightspeedmedium": "Flight Speed: Normal <-> Medium",
+  "key.dfutils.flightspeedhigh": "Flight Speed: Normal <-> High"
+}
