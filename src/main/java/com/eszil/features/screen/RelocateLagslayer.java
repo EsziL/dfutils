@@ -3,6 +3,7 @@ package com.eszil.features.screen;
 import com.eszil.config.Configuration;
 import com.eszil.utils.OtherUtils;
 import com.eszil.utils.ServerUtils;
+import com.eszil.utils.TextUtils;
 import me.shedaniel.autoconfig.AutoConfig;
 import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
 import net.minecraft.client.MinecraftClient;
@@ -48,9 +49,13 @@ public class RelocateLagslayer {
                 if (toRender && relocatedMessage != null) {
                     List<Text> siblings = relocatedMessage.getSiblings();
 
-                    matrixStack.drawTextWithShadow(client.textRenderer, siblings.getFirst(), 5, client.getWindow().getScaledHeight() - (client.textRenderer.fontHeight*3) - 5, 0xFFFFFF);
-                    matrixStack.drawTextWithShadow(client.textRenderer, siblings.get(1).copy().append(siblings.get(2).copy().append(siblings.get(3))), 5, client.getWindow().getScaledHeight() - (client.textRenderer.fontHeight*2) - 5, 0xFFFFFF);
-                    matrixStack.drawTextWithShadow(client.textRenderer, siblings.get(4).copy().append(siblings.get(5)), 5, client.getWindow().getScaledHeight() - client.textRenderer.fontHeight - 5, 0xFFFFFF);
+                    Text mid = siblings.get(1);
+
+                    matrixStack.drawTextWithShadow(client.textRenderer, siblings.getFirst(), 5, client.getWindow().getScaledHeight() - (client.textRenderer.fontHeight * 3) - 5, 0xFFFFFF);
+                    int i;
+                    for (i = 2; i < siblings.toArray().length -2; i++) mid = TextUtils.addTextToText(mid, siblings.get(i));
+                    matrixStack.drawTextWithShadow(client.textRenderer, mid, 5, client.getWindow().getScaledHeight() - (client.textRenderer.fontHeight * 2) - 5, 0xFFFFFF);
+                    matrixStack.drawTextWithShadow(client.textRenderer, TextUtils.addTextToText(siblings.get(i), siblings.get(i+1)), 5, client.getWindow().getScaledHeight() - client.textRenderer.fontHeight - 5, 0xFFFFFF);
                 }
             });
         }
