@@ -7,5 +7,6 @@ public class CommandRegistry {
 
     public static void registerCommands(CommandDispatcher<FabricClientCommandSource> dispatcher) {
         ip.register(dispatcher);
+        calc.register(dispatcher);
     }
 }
