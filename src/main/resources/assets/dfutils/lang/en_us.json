@@ -4,6 +4,7 @@
   "text.autoconfig.dfutils.category.automation": "Automation",
   "text.autoconfig.dfutils.category.keybinds": "Keybinds",
   "text.autoconfig.dfutils.category.screen": "Screen",
+  "text.autoconfig.dfutils.category.misc": "Miscellaneous",
 
   "text.autoconfig.dfutils.option.autoChatMode": "Auto /chat",
   "text.autoconfig.dfutils.option.autoChatMode.@Tooltip": "Executes '/chat [mode]' every time you join the plot (because DF's doesn't work)",
@@ -31,6 +32,9 @@
 
   "text.autoconfig.dfutils.option.codeGUI": "Codeblock GUI",
   "text.autoconfig.dfutils.option.codeGUI.@Tooltip": "Makes a custom GUI next to your inventory in dev to pick codeblocks out of",
+
+  "text.autoconfig.dfutils.option.clearInvReset": "Reset compact on clear inventory",
+  "text.autoconfig.dfutils.option.clearInvReset.@Tooltip": "Gives you the default codeblock pickers (does /rc) when you click the red X in the creative inventory",
 
   "key.category.dfutils": "dfutils",
   "key.dfutils.flightspeedmedium": "Flight Speed: Normal <-> Medium",
