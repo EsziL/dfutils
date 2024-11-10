@@ -1,7 +1,5 @@
 package com.eszil.utils;
 
-import com.mojang.brigadier.context.CommandContext;
-import net.fabricmc.fabric.api.client.command.v2.FabricClientCommandSource;
 import net.minecraft.text.Text;
 
 import java.util.List;

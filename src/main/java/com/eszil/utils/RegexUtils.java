@@ -1,6 +1,5 @@
 package com.eszil.utils;
 
-import net.minecraft.client.MinecraftClient;
 import net.minecraft.text.Text;
 
 import java.util.regex.Pattern;

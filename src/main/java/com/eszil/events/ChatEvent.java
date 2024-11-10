@@ -6,7 +6,6 @@ import com.eszil.features.automation.AutoChatLocal;
 import com.eszil.features.automation.AutoLagslayer;
 import com.eszil.utils.RegexUtils;
 import net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents;
-import net.minecraft.client.MinecraftClient;
 
 public class ChatEvent {
     public static void register() {

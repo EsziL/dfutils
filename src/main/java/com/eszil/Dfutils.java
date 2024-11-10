@@ -1,9 +1,7 @@
 package com.eszil;
 
 import com.eszil.config.Configuration;
-import com.eszil.events.ChatEvent;
 import com.eszil.events.Events;
-import com.eszil.events.JoinEvent;
 import com.eszil.features.keybinds.Keybinds;
 import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.serializer.Toml4jConfigSerializer;

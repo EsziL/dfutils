@@ -10,7 +10,6 @@ import net.minecraft.client.MinecraftClient;
 import net.minecraft.text.Style;
 import net.minecraft.text.Text;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 

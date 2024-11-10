@@ -1,7 +1,6 @@
 package com.eszil;
 
 import com.eszil.enums.DFMode;
-import net.minecraft.world.GameMode;
 
 public class PublicValues {
 

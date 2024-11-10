@@ -7,8 +7,6 @@ import me.shedaniel.autoconfig.AutoConfig;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.text.Text;
 
-import java.util.regex.Pattern;
-
 public class AutoLagslayer {
 
     public static void run(Text message) {
