@@ -7,6 +7,9 @@ import com.eszil.utils.TextUtils;
 import me.shedaniel.autoconfig.AutoConfig;
 import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
 import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.render.model.json.ModelTransformationMode;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.text.Text;
 
 import java.util.List;
@@ -35,6 +38,7 @@ public class RelocateLagslayer {
 
             return true;
         }
+
         return false;
     }
 
