@@ -10,6 +10,13 @@
   "text.autoconfig.dfutils.option.autoChatMode.enabled": "Enabled",
   "text.autoconfig.dfutils.option.autoChatMode.mode": "Mode",
 
+  "text.autoconfig.dfutils.option.autoJoinDF": "Auto Join DF",
+  "text.autoconfig.dfutils.option.autoJoinDF.@Tooltip": "Automatically joins DF every time you start your game",
+  "text.autoconfig.dfutils.option.autoJoinDF.enabled": "Enabled",
+  "text.autoconfig.dfutils.option.autoJoinDF.autoJoinNode": "Auto Join Node",
+  "text.autoconfig.dfutils.option.autoJoinDF.autoJoinPlot": "Auto Join Plot",
+  "text.autoconfig.dfutils.option.autoJoinDF.autoJoinPlotID": "Auto Plot ID",
+
   "text.autoconfig.dfutils.option.autoLagslayer": "Auto /lagslayer",
   "text.autoconfig.dfutils.option.autoLagslayer.@Tooltip": "Executes '/lagslayer' every time you join dev mode",
 

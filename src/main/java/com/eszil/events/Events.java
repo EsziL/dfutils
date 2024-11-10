@@ -9,6 +9,7 @@ public class Events {
         ChatEvent.register();
         JoinEvent.register();
         EndClientTickEvent.register();
+        LeaveEvent.register();
     }
 
     public static void tick(MinecraftClient client) {

@@ -4,8 +4,9 @@
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [],
 	"client": [
-		"PacketMixin",
-		"InventoryMixin"
+		"InitMixin",
+		"InventoryMixin",
+		"PacketMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

@@ -1,5 +1,7 @@
 package com.eszil.config;
 
+import com.eszil.enums.ChatModeType;
+import com.eszil.enums.DFNodes;
 import me.shedaniel.autoconfig.ConfigData;
 import me.shedaniel.autoconfig.annotation.Config;
 import me.shedaniel.autoconfig.annotation.ConfigEntry;
@@ -13,13 +15,6 @@ public class Configuration implements ConfigData {
     public AutoChatModeSection autoChatMode = new AutoChatModeSection();
 
     public static class AutoChatModeSection {
-        public enum ChatModeType {
-            Local,
-            Global,
-            None,
-            DND
-        }
-
         public boolean enabled = true;
 
         @ConfigEntry.Gui.EnumHandler(option = ConfigEntry.Gui.EnumHandler.EnumDisplayOption.BUTTON)
@@ -29,6 +24,22 @@ public class Configuration implements ConfigData {
     @ConfigEntry.Category("automation")
     @ConfigEntry.Gui.Tooltip
     public boolean autoLagslayer = true;
+
+    @ConfigEntry.Category("automation")
+    @ConfigEntry.Gui.CollapsibleObject
+    @ConfigEntry.Gui.Tooltip
+    public AutoJoinDF autoJoinDF = new AutoJoinDF();
+
+    public static class AutoJoinDF {
+        public boolean enabled = false;
+
+        @ConfigEntry.Gui.EnumHandler(option = ConfigEntry.Gui.EnumHandler.EnumDisplayOption.BUTTON)
+        public DFNodes autoJoinNode = DFNodes.None;
+
+        public boolean autoJoinPlot = false;
+
+        public int autoJoinPlotID = 0;
+    }
 
     @ConfigEntry.Category("keybinds")
     @ConfigEntry.Gui.CollapsibleObject
