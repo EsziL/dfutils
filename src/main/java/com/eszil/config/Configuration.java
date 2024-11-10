@@ -44,4 +44,8 @@ public class Configuration implements ConfigData {
     @ConfigEntry.Category("screen")
     @ConfigEntry.Gui.Tooltip
     public boolean relocateLagslayer = true;
+
+    @ConfigEntry.Category("screen")
+    @ConfigEntry.Gui.Tooltip
+    public boolean codeGUI = false;
 }

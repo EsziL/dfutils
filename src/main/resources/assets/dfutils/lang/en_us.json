@@ -22,6 +22,9 @@
   "text.autoconfig.dfutils.option.relocateLagslayer": "Relocate Lagslayer",
   "text.autoconfig.dfutils.option.relocateLagslayer.@Tooltip": "Relocates the /lagslayer output so it doesn't mess with your actionbar",
 
+  "text.autoconfig.dfutils.option.codeGUI": "Codeblock GUI",
+  "text.autoconfig.dfutils.option.codeGUI.@Tooltip": "Makes a custom GUI next to your inventory in dev to pick codeblocks out of",
+
   "key.category.dfutils": "dfutils",
   "key.dfutils.flightspeedmedium": "Flight Speed: Normal <-> Medium",
   "key.dfutils.flightspeedhigh": "Flight Speed: Normal <-> High"

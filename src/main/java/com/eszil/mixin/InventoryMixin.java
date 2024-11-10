@@ -1,8 +1,10 @@
 package com.eszil.mixin;
 
 import com.eszil.PublicValues;
+import com.eszil.config.Configuration;
 import com.eszil.enums.DFMode;
 import com.eszil.utils.OtherUtils;
+import me.shedaniel.autoconfig.AutoConfig;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.screen.ingame.CreativeInventoryScreen;
@@ -33,10 +35,11 @@ public class InventoryMixin {
     private final int split = 5;
     @Unique
     private boolean cancelDrop = false;
-    @Unique
 
     @Inject(method = "drawBackground", at = @At("TAIL"))
     private void drawCustomInventory(DrawContext context, float delta, int mouseX, int mouseY, CallbackInfo ci) {
+        Configuration config = AutoConfig.getConfigHolder(Configuration.class).getConfig();
+        if (!config.codeGUI) return;
         MinecraftClient client = MinecraftClient.getInstance();
 
         if (PublicValues.playerMode != DFMode.DEV) return;
@@ -68,6 +71,8 @@ public class InventoryMixin {
     @Inject(method = "mouseClicked", at= @At("HEAD"), cancellable = true)
     private void onMouseClick(double mouseX, double mouseY, int button, CallbackInfoReturnable<Boolean> cir) {
         MinecraftClient client = MinecraftClient.getInstance();
+        Configuration config = AutoConfig.getConfigHolder(Configuration.class).getConfig();
+        if (!config.codeGUI) return;
 
         if (PublicValues.playerMode != DFMode.DEV || client.player == null) return;
 
